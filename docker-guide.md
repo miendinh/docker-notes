@@ -46,6 +46,7 @@ ex:
 docker tag 52caa40054059fc07e4148337efa0a937799dc25ddc6b2e9f4d7deec4cf63177 my-image
 ```
 test:
+
 ```docker run -ti my-image
 ```
 
