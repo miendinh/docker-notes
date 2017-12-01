@@ -1,5 +1,6 @@
 ## Docker Guide - Best Practices
----
+
+[](http://apachebooster.com/kb/wp-content/uploads/2017/09/docker-architecture.png)
 
 ### list all docker images
 ```
@@ -51,7 +52,6 @@ test:
 ```
 
 ## Running processes in container
----
 
 * --rm : do not keep container after finish process
 ```
@@ -94,7 +94,7 @@ docker logs my-container
 docker kill <container-name>
 ```
 ## Manage container
----
+
 
 ### Memory limits
 ```
@@ -106,7 +106,7 @@ docker run --cpu-shares relative to other containers
 docker run --cpu-quota to limit it in general
 ```
 ## Networking
----
+
 
 ex:
 - echo-server ( -p port_in[:port_out] )
@@ -143,7 +143,7 @@ ex:
 docker run -p 1234:1234/udp
 ```
 ## Connecting between Containers
----
+
 
 Client Container-->Host Network--->Virtual Network ---> Server Container
 
@@ -164,7 +164,7 @@ docker run -ti --rm ubuntu:14.04 bash
 nc <container-id> 1234
 ```
 ## container connects to other container directly.
----
+
 - server
 ```
 docker run -ti --rm --name server ubuntu:14.04 bash
@@ -181,7 +181,7 @@ nc server 1234
 + That links can break when containers restart
 
 ### Make Links Not Break
----
+
 - Docker has private networks.
 - Fix the Links
 - Must create the networks in advance
