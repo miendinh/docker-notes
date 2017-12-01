@@ -1,6 +1,6 @@
 ## Docker Guide - Best Practices
 
-[](http://apachebooster.com/kb/wp-content/uploads/2017/09/docker-architecture.png)
+![](http://apachebooster.com/kb/wp-content/uploads/2017/09/docker-architecture.png)
 
 ### list all docker images
 ```
