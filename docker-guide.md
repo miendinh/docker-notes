@@ -107,6 +107,7 @@ docker run --cpu-quota to limit it in general
 ```
 ## Networking
 
+![](https://goldmann.pl/images/docker-network/network.png)
 
 ex:
 - echo-server ( -p port_in[:port_out] )
