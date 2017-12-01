@@ -2,6 +2,10 @@
 
 ![](http://apachebooster.com/kb/wp-content/uploads/2017/09/docker-architecture.png)
 
+### Cheat Sheet
+
+![](http://extremeautomation.io/img/cheatsheets/cheat_sheet_docker_page_1.png)
+
 ### list all docker images
 ```
 docker images
