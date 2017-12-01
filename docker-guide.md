@@ -4,6 +4,8 @@
 
 ### Cheat Sheet
 
+https://github.com/wsargent/docker-cheat-sheet#why-docker
+
 ![](http://extremeautomation.io/img/cheatsheets/cheat_sheet_docker_page_1.png)
 
 ### list all docker images
@@ -11,10 +13,7 @@
 docker images
 ```
 ### run ubuntu bash
-- image ---> docker run ---> running container
-                                    |
-                                    |
-                              stopped container -----> docker commit ------> new images
+- image --> docker run --> running container --> stopped container --> docker commit --> new images
 - image is not change.
 
 #### -ti = terminal keyboardInteractive
