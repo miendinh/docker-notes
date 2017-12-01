@@ -207,3 +207,112 @@ nc server 1234
 ```
 - Now kill the server and restart again.
 - The link between server and client does not break.
+
+### Limit access to only host
+
+```
+docker run -p 127.0.0.1:1234:1234/tcp
+```
+
+## Listing images
+- List downloaded images
+```
+docker images
+```
+- Tagging gives images
+```
+docker commit <container-id|name> <new-image-name>[:<tag>]
+```
+ex:
+```
+docker ps -l
+docker commit b5938fe91f4c my-image-now
+docker images
+```
+### Getting images
+- for offline work
+```
+docker pull
+```
+### Remove images
+```
+docker rmi <image-name|id>
+```
+ex:
+```
+docker images
+docker rmi my-image
+```
+
+## Volumes
+- Sharing data between containers and containers and host.
+- Virtual "dicsc"
+- Two types:
+  + Persistent : Keep when container went away.
+  + Ephemeral: exists in container life.
+- Volumes is not a part of image.
+
+### Sharing data with the host
+- like VMware.
+- Sharing folders with the host
+ex:
+```
+mkdir /home/docker/my-volume
+docker run -ti -v=/home/docker/my-volume:/shared-folder ubuntu bash
+cd /shared-folder
+touch my-data
+Press Crtl + D
+
+ls ./my-volume/shared-folder
+```
+- Sharing a "single file" into a container
+
+### Sharing Data between Containers
+* volumes-from
+* Shared disks that exist only as long as they are being used
+* Can be shared between containers
+
+ex
+- Container #1
+```
+docker run -ti -v /shared-data ubuntu bash
+echo "hello, is it great!" > /shared-data/my-file
+```
+- Container #2
+```
+docker ps -l
+docker run -ti --volumnes-from jovial_goodall ubuntu bash
+cat /shared-data/my-file
+```
+
+## Docker Registries
+
+- Registries and distributes images.
+
+### Finding Images
+
+https://hub.docker.com
+
+```
+docker search centos
+```
+
+- Pull image to the world.
+```
+docker login
+docker pull centos
+docker tag centos:123 test/test-image-32:v123.1234
+docker push test/test-image-32:v123.1234
+```
+Note: Do not push password with the image
+
+## Dockerfile
+- What is it ?
++ code to create image
+
+docker build -t name-of-result .
+
++ each line takes the image of previous line and makes another images.
++ the previous image is unchanged.
+
+- Reference: https://docs.docker.com/engine/reference/builder/
