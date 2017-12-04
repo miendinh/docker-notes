@@ -31,7 +31,7 @@ sudo yum install docker-ce
 ```
 yum list docker-ce --showduplicates | sort -r
 ```
-### Start a docker
+### Starting a docker
 ```
 service docker start
 
