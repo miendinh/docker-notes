@@ -1,7 +1,5 @@
-## install Docker in CentOS
+## Install Docker in CentOS
 ---
-
-
 ```
 vi /etc/yum.repos.d/CentOS-Sources.repo
 
@@ -29,21 +27,21 @@ sudo yum-config-manager --enable docker-ce-test
 sudo yum install docker-ce
 ```
 
-### list of docker version
+### List of docker version
 ```
 yum list docker-ce --showduplicates | sort -r
 ```
-### start a docker
+### Start a docker
 ```
 service docker start
 
 sudo systemctl start docker
 ```
-### hello world
+### Hello world
 ```
 sudo docker run hello-world
 ```
-### test with ubuntu bash
+### Test with ubuntu bash
 ```
 docker run -it ubuntu bash
 ```

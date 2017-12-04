@@ -8,11 +8,11 @@ https://github.com/wsargent/docker-cheat-sheet#why-docker
 
 ![](http://extremeautomation.io/img/cheatsheets/cheat_sheet_docker_page_1.png)
 
-### list all docker images
+### List all docker images
 ```
 docker images
 ```
-### run ubuntu bash
+### Running ubuntu bash
 - image --> docker run --> running container --> stopped container --> docker commit --> new images
 - image is not change.
 
@@ -20,23 +20,23 @@ docker images
 ```
 docker run -ti ubuntu:lastest
 ```
-### list of containers
+### List of containers
 ```
 docker ps
 ```
-#### list of docker with format
+#### List of docker with format
 ```
 docker ps --format $FORMAT
 ```
-#### list all (-a)
+#### List all (-a)
 ```
 docker ps -a
 ```
-#### list last (-l)
+#### List last (-l)
 ```
 docker ps -l
 ```
-### docker commit
+### Docker commit
 - create new image from container
 ```
 docker commit <docker id | name> [<new-image-name>]
@@ -92,7 +92,7 @@ ex:
 docker run --name my-container -d ubuntu bash -c "more /etc/hosts"
 docker logs my-container
 ```
-### kill container
+### Kill a container
 ```
 docker kill <container-name>
 ```
@@ -119,7 +119,7 @@ docker run --rm -ti -p 45678:45678 -p 45679:45679 --name echo-server ubuntu:14.0
 
 nc -lp 45678 | nc -lp 45679
 ```
-### get container ip
+### Getting container ip
 ```
 docker ps
 docker inspect <container-id> | grep IP
@@ -184,7 +184,7 @@ nc server 1234
 + Automatically assigns a hot name
 + That links can break when containers restart
 
-### Make Links Not Break
+### Making Links Not Break
 
 - Docker has private networks.
 - Fix the Links
@@ -208,7 +208,7 @@ nc server 1234
 - Now kill the server and restart again.
 - The link between server and client does not break.
 
-### Limit access to only host
+### Limiting access to only host
 
 ```
 docker run -p 127.0.0.1:1234:1234/tcp
@@ -234,7 +234,7 @@ docker images
 ```
 docker pull
 ```
-### Remove images
+### Removing images
 ```
 docker rmi <image-name|id>
 ```
@@ -297,7 +297,7 @@ https://hub.docker.com
 docker search centos
 ```
 
-- Pull image to the world.
+- Push image to the world.
 ```
 docker login
 docker pull centos
