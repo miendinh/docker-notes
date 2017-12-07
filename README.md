@@ -1,4 +1,4 @@
-## Docker Guide - Best Practices
+## Docker Notes - Best Practices
 
 ![](http://apachebooster.com/kb/wp-content/uploads/2017/09/docker-architecture.png)
 
