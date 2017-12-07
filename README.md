@@ -1,7 +1,7 @@
 ## Docker Notes
 
 ### Setup
-* (CentOS)[centos-install.md]
+* (CentOS)[https://github.com/miendinh/docker-notes/blob/master/centos-install.md]
 
 ### Notes
-* (Docker Notes)[docker-guide.md]
+* (Docker Notes)[https://github.com/miendinh/docker-notes/blob/master/docker-guide.md]
