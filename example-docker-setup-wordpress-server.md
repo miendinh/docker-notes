@@ -35,7 +35,7 @@ docker exec -ti admiring_dubinsky bash -c "service nginx start"
 ```
 - Is nginx running ?
 ```
-  telnet <container-IP> 80
+  curl <container-IP> 80
 ```
 #### Step 5: Port forward for external access to container.
 - Using iptables.
