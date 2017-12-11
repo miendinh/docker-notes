@@ -1,4 +1,4 @@
-### Wordpress Dev Environment with Docker
+### Create Wordpress Dev Environment with Docker
 
 #### Step 1: Search an image
 ```
