@@ -21,7 +21,7 @@ docker images
 
 #### -ti = terminal keyboardInteractive
 ```
-docker run -ti ubuntu:lastest
+docker run -ti ubuntu:latest
 ```
 ### List of containers
 ```
@@ -54,7 +54,8 @@ docker tag 52caa40054059fc07e4148337efa0a937799dc25ddc6b2e9f4d7deec4cf63177 my-i
 ```
 test:
 
-```docker run -ti my-image
+```
+docker run -ti my-image
 ```
 
 ## Running processes in container
