@@ -1,17 +1,17 @@
-### Create Wordpress Dev Environment with Docker
+### Create Nginx Server with Docker
 
 #### Step 1: Search an image
 ```
-docker search wordpress nginx
+docker search nginx
 ```
 
 #### Step 2: Pull an image
 ```
-docker pull tlongren/docker-wordpress-nginx-ssh
+docker pull nginx
 ```
 #### Step 3: Create a container
 ```
-docker run -d -ti tlongren/docker-wordpress-nginx-ssh bash
+docker run -d -ti nginx bash
 ```
 - Get container name
 ```
@@ -20,9 +20,6 @@ docker ps -l
 - Start some services in "background" docker.
 - "admiring_dubinsky" is the name of container of my server, change it for yours.
 
-```
-docker exec -ti admiring_dubinsky bash -c "service mysql start"
-```
 ```
 docker exec -ti admiring_dubinsky bash -c "service nginx start"
 ```
