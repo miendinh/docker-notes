@@ -18,7 +18,7 @@ docker run -d -ti tlongren/docker-wordpress-nginx-ssh bash
 docker ps -l
 ```
 - Start some services in "background" docker.
-- "admiring_dubinsky" is the name of Container of my server, change it for your server.
+- "admiring_dubinsky" is the name of container of my server, change it for yours.
 
 ```
 docker exec -ti admiring_dubinsky bash -c "service mysql start"
@@ -38,7 +38,16 @@ docker exec -ti admiring_dubinsky bash -c "service nginx start"
   telnet <container-IP> 80
 ```
 #### Step 5: Port forward for external access to container.
-@TODO
-##### With CentOS
+- Using iptables.
 
-##### With Ubuntu
+```
+sysctl net.ipv4.ip_forward=1
+
+iptables -t nat -A PREROUTING -p tcp -d 0.0.0.0/32 --dport 80 -j DNAT --to-destination <container-ip>:80
+
+iptables -t nat -A POSTROUTING -j MASQUERADE
+```
+
+#### References
+
+1. https://www.debuntu.org/how-to-redirecting-network-traffic-to-a-new-ip-using-iptables/
